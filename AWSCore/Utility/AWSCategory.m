@@ -476,11 +476,7 @@ static NSTimeInterval _clockskew = 0.0;
 }
 
 - (BOOL)aws_isVirtualHostedStyleCompliant {
-    if (![self aws_isDNSBucketName]) {
-        return NO;
-    } else {
-        return ![self aws_contains:@"."];
-    }
+    return NO;
 }
 
 - (AWSRegionType)aws_regionTypeValue {
